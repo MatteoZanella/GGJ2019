@@ -93,7 +93,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 1582683023}
   fallOffset: {x: 70, y: 0, z: 70}
   duration: 2.5
-  speedMultiplyer: 2
+  speedMultiplier: 2.5
   boostParticles: {fileID: 1886275639}
   joints:
   - {fileID: 1582683024}

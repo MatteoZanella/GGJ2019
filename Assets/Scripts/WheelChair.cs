@@ -10,9 +10,9 @@ public class WheelChair : MonoBehaviour
     [SerializeField] private Rigidbody _rigidbody;
     public Vector3 fallOffset = new Vector3(0,0,70f);
     [Header("Boost")] public float duration = 2.5f;
-    public float speedMultiplyer = 4;
+    public float speedMultiplier = 2.5f;
     [SerializeField] private ParticleSystem boostParticles;
-    private bool _boostOn = false;
+    private bool _boostOn = false, _boosted = false;
 
     [Header("Eject")] public FixedJoint[] joints;
     public Vector3 ejectPower;
@@ -21,7 +21,7 @@ public class WheelChair : MonoBehaviour
     private bool _ejected;
 
     [Header("character")] public GameObject prefab;
-    private float _ejectTime = 0;
+    private float _ejectTime = 0, _boostTime;
     public Transform com;
 
     private void Start()
@@ -37,14 +37,28 @@ public class WheelChair : MonoBehaviour
         Camera.main.GetComponent<SmoothFollow>().target = transform;
     }
     
-
+    
     void Update()
     {
         _rigidbody.centerOfMass = com.localPosition;
         _ejectTime += Time.deltaTime;
         if (_ejected && !_boostOn)
             return;
-        float fast = speed * (_boostOn ? speedMultiplyer : Input.GetAxis("Vertical"));
+        float fast = speed;
+        if (_boostOn)
+        {
+            _boostTime += Time.deltaTime;
+            fast *= Mathf.Lerp(transform.InverseTransformDirection(_rigidbody.velocity).z / speed, speedMultiplier, _boostTime / duration);
+        } else if (_boosted) {
+            _boostTime += Time.deltaTime;
+            fast *= Mathf.Lerp(speedMultiplier, Input.GetAxis("Vertical"), _boostTime / (duration/2));
+        } else
+        {
+            fast *= Input.GetAxis("Vertical");
+        }
+
+        Debug.Log(fast / speed);
+
         float str = Input.GetAxis("Horizontal") * steer;
         transform.Rotate(Vector3.up, str);
         var localVel = transform.InverseTransformDirection(_rigidbody.velocity);
@@ -73,9 +87,15 @@ public class WheelChair : MonoBehaviour
     {
         _boostOn = true;
         boostParticles.Play();
-        yield return new WaitForSeconds(duration);
+        _boostTime = 0;
+        yield return new WaitForSeconds(duration);        
         boostParticles.Stop();
         _boostOn = false;
+
+        _boostTime = 0;
+        _boosted = true;
+        yield return new WaitForSeconds(duration/2);
+        _boosted = false;
     }
 
 
