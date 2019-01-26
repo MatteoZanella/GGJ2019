@@ -21,13 +21,15 @@ public class Salmon : MonoBehaviour
         if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f && timeOut <= 0)
         {
             timeOut += 0.5f;
-            p1.AddForce(Camera.main.transform.right * Input.GetAxis("Horizontal") + Vector3.up * power / 3f);
+            p1.AddForce((Camera.main.transform.right * Input.GetAxis("Horizontal")) * power + Vector3.up * power);
             Shake();
         }
         else if (Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f && timeOut <= 0)
         {
             timeOut += 0.5f;
-            p1.AddForce(Camera.main.transform.forward * Input.GetAxis("Vertical") * power + Vector3.up * power / 3f);
+            Vector3 dir = Camera.main.transform.forward;
+            dir.y = 0;
+            p1.AddForce(dir.normalized * Input.GetAxis("Vertical") * power + Vector3.up * power);
             Shake();
         }
         else if (timeOut <= 0)
