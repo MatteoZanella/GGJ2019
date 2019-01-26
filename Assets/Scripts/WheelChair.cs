@@ -31,7 +31,7 @@ public class WheelChair : MonoBehaviour
     void Update()
     {
         _ejectTime += Time.deltaTime;
-        if (_ejected)
+        if (_ejected && !_boostOn)
             return;
         float fast = speed * (_boostOn ? speedMultiplyer : Input.GetAxis("Vertical"));
         float str = Input.GetAxis("Horizontal") * steer;
@@ -39,9 +39,13 @@ public class WheelChair : MonoBehaviour
         var localVel = transform.InverseTransformDirection(_rigidbody.velocity);
         localVel.z = fast;
         _rigidbody.velocity = transform.TransformDirection(localVel);
+        if (_ejected)
+            return;
         if (transform.localEulerAngles.x > 60 && transform.localEulerAngles.x < 270 ||
-            transform.localEulerAngles.x < -45f)
-            Eject();
+            transform.localEulerAngles.x > 300 && transform.localEulerAngles.x < 310||
+            transform.localEulerAngles.z > 45 && transform.localEulerAngles.z < 90  ||
+            transform.localEulerAngles.z > 270 && transform.localEulerAngles.z < 315)
+            Eject(false);
         if (Input.GetKeyDown(KeyCode.E))
             Eject();
         if (Input.GetKeyDown(KeyCode.B))
@@ -64,14 +68,14 @@ public class WheelChair : MonoBehaviour
     }
 
 
-    void Eject()
+    void Eject(bool launch = true)
     {
         _ejected = true;
         foreach (FixedJoint joint in joints)
         {
             Rigidbody rb = joint.connectedBody;
             joint.connectedBody = null;
-            if (rb)
+            if (rb && launch)
                 rb.AddRelativeForce(ejectPower);
         }
 
@@ -91,7 +95,7 @@ public class WheelChair : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!_ejected || _ejectTime < 1f)
+        if (!_ejected || _ejectTime < 1f || !other.CompareTag("Player"))
             return;
         _ejected = false;
         character.SetParent(transform);

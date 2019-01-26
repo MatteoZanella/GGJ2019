@@ -13,15 +13,15 @@ public class Salmon : MonoBehaviour
 
     void Update()
     {
-        if (transform.parent == null && Input.GetKeyDown(KeyCode.Space) && timeOut <= 0)
+        if (transform.parent != null)
+            return;
+        var tg = GameObject.FindWithTag("GameController").transform;
+        CameraTarget.LookAt(tg);
+        if (Input.GetKeyDown(KeyCode.Space) && timeOut <= 0)
         {
             timeOut += 0.5f;
-            Vector3 dir = GameObject.FindWithTag("GameController").transform.position - p1.position;
+            Vector3 dir = tg.position - p1.position;
             p1.AddForce(dir.normalized * power + Vector3.up*power/2f);
-                /*Camera.main.transform.TransformDirection(Vector3.up * power +
-                                                                 Vector3.forward * Input.GetAxis("Vertical") * power +
-                                                                 Vector3.right * Input.GetAxis("Horizontal") * power));
-            */
             p1.AddRelativeTorque(rotation);
             p2.AddRelativeTorque(-rotation);
         }
