@@ -1171,6 +1171,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2150880320909333057, guid: e596cab00bdd1ad4b8b8cd8f10ff3dfe,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.34159654
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150880320909333057, guid: e596cab00bdd1ad4b8b8cd8f10ff3dfe,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.34159654
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150880320909333057, guid: e596cab00bdd1ad4b8b8cd8f10ff3dfe,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34159654
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542147305438920103, guid: e596cab00bdd1ad4b8b8cd8f10ff3dfe,
+        type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e596cab00bdd1ad4b8b8cd8f10ff3dfe, type: 3}
 --- !u!1 &1103196955
@@ -1928,6 +1948,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d16ebf04c31bc419c3afc994e74f2f, type: 3}
+--- !u!1 &1769698836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1094398336497672481, guid: e596cab00bdd1ad4b8b8cd8f10ff3dfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1102707581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1769698844
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769698836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf6d3f620952bc64996acd9a032a7ce0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1820446507
 PrefabInstance:
   m_ObjectHideFlags: 0
