@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 90f6998cfdec09546adf76254c3bd998
+guid: 99ce0796568ec409996160f9ec88a763
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -16,6 +16,7 @@ ModelImporter:
     2300000: Ramp
     3300000: Ramp
     4300000: Ramp
+    6400000: Ramp
     10800000: Lamp
   externalObjects: {}
   materials:
@@ -50,12 +51,12 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

@@ -8,7 +8,7 @@ public class WheelChair : MonoBehaviour
     public float speed;
     public float steer;
     [SerializeField] private Rigidbody _rigidbody;
-    public float fallOffset =70f;
+    public Vector3 fallOffset = new Vector3(0,0,70f);
     [Header("Boost")] public float duration = 2.5f;
     public float speedMultiplyer = 4;
     [SerializeField] private ParticleSystem boostParticles;
@@ -22,6 +22,7 @@ public class WheelChair : MonoBehaviour
 
     [Header("character")] public GameObject prefab;
     private float _ejectTime = 0;
+    public Transform com;
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class WheelChair : MonoBehaviour
 
     void Update()
     {
+        _rigidbody.centerOfMass = com.localPosition;
         _ejectTime += Time.deltaTime;
         if (_ejected && !_boostOn)
             return;
@@ -50,10 +52,10 @@ public class WheelChair : MonoBehaviour
         _rigidbody.velocity = transform.TransformDirection(localVel);
         if (_ejected)
             return;
-        if (transform.localEulerAngles.x > 60 && transform.localEulerAngles.x < 270 ||
-            transform.localEulerAngles.x > 300 && transform.localEulerAngles.x < 310||
-            transform.localEulerAngles.z > fallOffset && transform.localEulerAngles.z < 90  ||
-            transform.localEulerAngles.z > 270 && transform.localEulerAngles.z < 360-fallOffset)
+        if (transform.localEulerAngles.x > fallOffset.x && transform.localEulerAngles.x < 270 ||
+            transform.localEulerAngles.x > 270 && transform.localEulerAngles.x < 360-fallOffset.x||
+            transform.localEulerAngles.z > fallOffset.z && transform.localEulerAngles.z < 90  ||
+            transform.localEulerAngles.z > 270 && transform.localEulerAngles.z < 360-fallOffset.z)
             Eject(false);
         if (Input.GetKeyDown(KeyCode.E))
             Eject();
