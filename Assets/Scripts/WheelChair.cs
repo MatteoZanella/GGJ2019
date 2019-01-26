@@ -8,7 +8,7 @@ public class WheelChair : MonoBehaviour
     public float speed;
     public float steer;
     [SerializeField] private Rigidbody _rigidbody;
-
+    public float fallOffset =70f;
     [Header("Boost")] public float duration = 2.5f;
     public float speedMultiplyer = 4;
     [SerializeField] private ParticleSystem boostParticles;
@@ -25,8 +25,17 @@ public class WheelChair : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(Dab());
+    }
+
+    IEnumerator Dab()
+    {
+        character.GetComponent<Salmon>().CameraTarget.eulerAngles = transform.TransformDirection(Vector3.back);
+        Camera.main.GetComponent<SmoothFollow>().target = character.GetComponent<Salmon>().CameraTarget;
+        yield return new WaitForSeconds(0.5f);
         Camera.main.GetComponent<SmoothFollow>().target = transform;
     }
+    
 
     void Update()
     {
@@ -43,8 +52,8 @@ public class WheelChair : MonoBehaviour
             return;
         if (transform.localEulerAngles.x > 60 && transform.localEulerAngles.x < 270 ||
             transform.localEulerAngles.x > 300 && transform.localEulerAngles.x < 310||
-            transform.localEulerAngles.z > 45 && transform.localEulerAngles.z < 90  ||
-            transform.localEulerAngles.z > 270 && transform.localEulerAngles.z < 315)
+            transform.localEulerAngles.z > fallOffset && transform.localEulerAngles.z < 90  ||
+            transform.localEulerAngles.z > 270 && transform.localEulerAngles.z < 360-fallOffset)
             Eject(false);
         if (Input.GetKeyDown(KeyCode.E))
             Eject();
@@ -81,6 +90,7 @@ public class WheelChair : MonoBehaviour
 
         RecSetLayer(character);
         character.SetParent(null);
+       
         Camera.main.GetComponent<SmoothFollow>().target = character.GetComponent<Salmon>().CameraTarget;
         Destroy(GetComponent<FixedJoint>());
         _ejectTime = 0;
