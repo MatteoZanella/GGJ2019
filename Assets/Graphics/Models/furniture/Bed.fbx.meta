@@ -1,29 +1,45 @@
 fileFormatVersion: 2
-guid: 57a63e9a195d3fe438cdb33fd1e4cf6e
+guid: 09b550f3a8d676a48af39108278a87db
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Camera
-    100004: Door
-    100006: Doorknob
-    100008: Lamp
-    400000: //RootNode
-    400002: Camera
-    400004: Door
-    400006: Doorknob
-    400008: Lamp
+    100000: Base
+    100002: //RootNode
+    100004: Camera
+    100006: Coperta
+    100008: Cuscino
+    100010: Lamp
+    100012: Materasso
+    100014: ParteFuori
+    400000: Base
+    400002: //RootNode
+    400004: Camera
+    400006: Coperta
+    400008: Cuscino
+    400010: Lamp
+    400012: Materasso
+    400014: ParteFuori
     2000000: Camera
-    2100000: Material
-    2100002: Porta
-    2300000: //RootNode
-    2300002: Door
-    2300004: Doorknob
-    3300000: //RootNode
-    3300002: Door
-    3300004: Doorknob
-    4300000: Door
-    4300002: Doorknob
+    2100000: Materasso
+    2100002: sheets
+    2100004: Cuscino
+    2100006: esterioricoperte
+    2100008: LettoBase
+    2300000: Base
+    2300002: Coperta
+    2300004: Cuscino
+    2300006: Materasso
+    2300008: ParteFuori
+    3300000: Base
+    3300002: Coperta
+    3300004: Cuscino
+    3300006: Materasso
+    3300008: ParteFuori
+    4300000: Materasso
+    4300002: Coperta
+    4300004: Cuscino
+    4300006: ParteFuori
+    4300008: Base
     10800000: Lamp
   externalObjects: {}
   materials:

@@ -1,29 +1,31 @@
 fileFormatVersion: 2
-guid: 57a63e9a195d3fe438cdb33fd1e4cf6e
+guid: fe7bc065ed7fbe4479b6f7b93d5ca59c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
+    100000: Base
     100002: Camera
-    100004: Door
-    100006: Doorknob
+    100004: Column
+    100006: //RootNode
     100008: Lamp
-    400000: //RootNode
+    100010: Top
+    400000: Base
     400002: Camera
-    400004: Door
-    400006: Doorknob
+    400004: Column
+    400006: //RootNode
     400008: Lamp
+    400010: Top
     2000000: Camera
-    2100000: Material
-    2100002: Porta
-    2300000: //RootNode
-    2300002: Door
-    2300004: Doorknob
-    3300000: //RootNode
-    3300002: Door
-    3300004: Doorknob
-    4300000: Door
-    4300002: Doorknob
+    2100000: Colonna
+    2300000: Base
+    2300002: Column
+    2300004: Top
+    3300000: Base
+    3300002: Column
+    3300004: Top
+    4300000: Column
+    4300002: Top
+    4300004: Base
     10800000: Lamp
   externalObjects: {}
   materials:
