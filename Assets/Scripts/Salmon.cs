@@ -20,7 +20,7 @@ public class Salmon : MonoBehaviour
 
         if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f && timeOut <= 0)
         {
-            timeOut += 0.5f;
+            timeOut += 0.4f;
             p1.AddForce((Camera.main.transform.right * Input.GetAxis("Horizontal")) * power + Vector3.up * power);
             Shake();
         }
@@ -34,7 +34,7 @@ public class Salmon : MonoBehaviour
         }
         else if (timeOut <= 0)
         {
-            timeOut += 0.7f;
+            timeOut += 0.8f;
             Vector3 dir = tg.position - p1.position;
             p1.AddForce(dir.normalized * power + Vector3.up * power);
             Shake();
