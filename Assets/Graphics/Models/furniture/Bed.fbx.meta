@@ -40,8 +40,38 @@ ModelImporter:
     4300004: Cuscino
     4300006: ParteFuori
     4300008: Base
+    6400000: Base
+    6400002: Coperta
+    6400004: Cuscino
+    6400006: Materasso
+    6400008: ParteFuori
     10800000: Lamp
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cuscino
+    second: {fileID: 2100000, guid: d60ae5302265140dbb862176bc2d5617, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LettoBase
+    second: {fileID: 2100000, guid: 70b98df98009947128406499a735eca3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Materasso
+    second: {fileID: 2100000, guid: 75877c08c5e9c4011bf41d6ba9e67c93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: esterioricoperte
+    second: {fileID: 2100000, guid: f748a63da735440f2894f3f661b2fd53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sheets
+    second: {fileID: 2100000, guid: 3853e9ddcf9a44d41bceab5184458f88, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -74,7 +104,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
