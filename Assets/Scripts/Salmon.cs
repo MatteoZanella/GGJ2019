@@ -17,7 +17,7 @@ public class Salmon : MonoBehaviour
         {
             timeOut += 0.5f;
             Vector3 dir = GameObject.FindWithTag("GameController").transform.position - p1.position;
-            p1.AddForce(dir * power + Vector3.up*power/2f);
+            p1.AddForce(dir.normalized * power + Vector3.up*power/2f);
                 /*Camera.main.transform.TransformDirection(Vector3.up * power +
                                                                  Vector3.forward * Input.GetAxis("Vertical") * power +
                                                                  Vector3.right * Input.GetAxis("Horizontal") * power));

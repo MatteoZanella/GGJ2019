@@ -7,17 +7,14 @@ public class WheelChair : MonoBehaviour
 {
     public float speed;
     public float steer;
-    [SerializeField]
-    private Rigidbody _rigidbody;
+    [SerializeField] private Rigidbody _rigidbody;
 
     [Header("Boost")] public float duration = 2.5f;
     public float speedMultiplyer = 4;
-    [SerializeField]
-    private ParticleSystem boostParticles;
+    [SerializeField] private ParticleSystem boostParticles;
     private bool _boostOn = false;
-    
-    [Header("Eject")]
-    public FixedJoint[] joints;
+
+    [Header("Eject")] public FixedJoint[] joints;
     public Vector3 ejectPower;
     public Transform character;
     public LayerMask defaultLayer;
@@ -42,9 +39,10 @@ public class WheelChair : MonoBehaviour
         var localVel = transform.InverseTransformDirection(_rigidbody.velocity);
         localVel.z = fast;
         _rigidbody.velocity = transform.TransformDirection(localVel);
-        if (transform.localEulerAngles.x > 60 && transform.localEulerAngles.x < 270)
+        if (transform.localEulerAngles.x > 60 && transform.localEulerAngles.x < 270 ||
+            transform.localEulerAngles.x < -45f)
             Eject();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
             Eject();
         if (Input.GetKeyDown(KeyCode.B))
             Boost();
@@ -64,7 +62,7 @@ public class WheelChair : MonoBehaviour
         boostParticles.Stop();
         _boostOn = false;
     }
-    
+
 
     void Eject()
     {
@@ -76,6 +74,7 @@ public class WheelChair : MonoBehaviour
             if (rb)
                 rb.AddRelativeForce(ejectPower);
         }
+
         RecSetLayer(character);
         character.SetParent(null);
         Camera.main.GetComponent<SmoothFollow>().target = character.GetComponent<Salmon>().CameraTarget;
@@ -97,7 +96,9 @@ public class WheelChair : MonoBehaviour
         _ejected = false;
         character.SetParent(transform);
         Destroy(gameObject);
-        GameObject go = Instantiate(prefab, transform.position, transform.rotation);
+
+        GameObject go = Instantiate(prefab, transform.position,
+            Quaternion.EulerRotation(0,transform.eulerAngles.y, 0));
         go.GetComponent<WheelChair>().prefab = prefab;
     }
 }

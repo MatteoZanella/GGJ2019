@@ -129,8 +129,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.2706811, z: 2.25904}
-  m_Center: {x: 0, y: 0.1510731, z: 0.35233152}
+  m_Size: {x: 2, y: 0.9709766, z: 1.3943589}
+  m_Center: {x: 0, y: 0.30092537, z: 0.14023995}
 --- !u!1 &217855169
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,7 +5190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {x: 5000, y: 5000, z: 0}
-  power: 1000
+  power: 7000
   p1: {fileID: 4596401338554691609}
   p2: {fileID: 4596401338790597070}
   CameraTarget: {fileID: 217855170}
