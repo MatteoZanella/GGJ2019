@@ -22,9 +22,18 @@ public class WheelChair : MonoBehaviour
     public Transform character;
     public LayerMask defaultLayer;
     private bool _ejected;
-   
+
+    [Header("character")] public GameObject prefab;
+    private float _ejectTime = 0;
+
+    private void Start()
+    {
+        Camera.main.GetComponent<SmoothFollow>().target = transform;
+    }
+
     void Update()
     {
+        _ejectTime += Time.deltaTime;
         if (_ejected)
             return;
         float fast = speed * (_boostOn ? speedMultiplyer : Input.GetAxis("Vertical"));
@@ -69,7 +78,9 @@ public class WheelChair : MonoBehaviour
         }
         RecSetLayer(character);
         character.SetParent(null);
+        Camera.main.GetComponent<SmoothFollow>().target = character.GetComponent<Salmon>().CameraTarget;
         Destroy(GetComponent<FixedJoint>());
+        _ejectTime = 0;
     }
 
     void RecSetLayer(Transform tr)
@@ -77,5 +88,16 @@ public class WheelChair : MonoBehaviour
         tr.gameObject.layer = defaultLayer;
         foreach (Transform t in tr)
             RecSetLayer(t);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!_ejected || _ejectTime < 1f)
+            return;
+        _ejected = false;
+        character.SetParent(transform);
+        Destroy(gameObject);
+        GameObject go = Instantiate(prefab, transform.position, transform.rotation);
+        go.GetComponent<WheelChair>().prefab = prefab;
     }
 }
