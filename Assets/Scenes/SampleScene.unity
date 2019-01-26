@@ -987,17 +987,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1103196956}
     m_Modifications:
-    - target: {fileID: 5874186568233760127, guid: 1187387e666f0419599a3728d2e48116,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 6403339466311110128, guid: 1187387e666f0419599a3728d2e48116,
         type: 3}
       propertyPath: m_Name
       value: Room (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6403339466311110128, guid: 1187387e666f0419599a3728d2e48116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5874186568233760127, guid: 1187387e666f0419599a3728d2e48116,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -2187,17 +2187,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1103196956}
     m_Modifications:
-    - target: {fileID: 5874186568233760127, guid: 1187387e666f0419599a3728d2e48116,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 6403339466311110128, guid: 1187387e666f0419599a3728d2e48116,
         type: 3}
       propertyPath: m_Name
       value: Room (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6403339466311110128, guid: 1187387e666f0419599a3728d2e48116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5874186568233760127, guid: 1187387e666f0419599a3728d2e48116,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -2641,17 +2641,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1103196956}
     m_Modifications:
-    - target: {fileID: 5874186568233760127, guid: 1187387e666f0419599a3728d2e48116,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 6403339466311110128, guid: 1187387e666f0419599a3728d2e48116,
         type: 3}
       propertyPath: m_Name
       value: Room (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6403339466311110128, guid: 1187387e666f0419599a3728d2e48116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5874186568233760127, guid: 1187387e666f0419599a3728d2e48116,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -2821,17 +2821,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1103196956}
     m_Modifications:
-    - target: {fileID: 5874186568233760127, guid: 1187387e666f0419599a3728d2e48116,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 6403339466311110128, guid: 1187387e666f0419599a3728d2e48116,
         type: 3}
       propertyPath: m_Name
       value: Room
       objectReference: {fileID: 0}
     - target: {fileID: 6403339466311110128, guid: 1187387e666f0419599a3728d2e48116,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5874186568233760127, guid: 1187387e666f0419599a3728d2e48116,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
