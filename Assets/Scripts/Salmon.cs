@@ -34,9 +34,9 @@ public class Salmon : MonoBehaviour
         }
         else if (timeOut <= 0)
         {
-            timeOut += 1f;
+            timeOut += 0.7f;
             Vector3 dir = tg.position - p1.position;
-            p1.AddForce(dir.normalized * power + Vector3.up * power / 2f);
+            p1.AddForce(dir.normalized * power + Vector3.up * power);
             Shake();
         }
         timeOut -= Time.deltaTime;
