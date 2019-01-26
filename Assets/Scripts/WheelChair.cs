@@ -48,7 +48,7 @@ public class WheelChair : MonoBehaviour
         if (_boostOn)
         {
             _boostTime += Time.deltaTime;
-            fast *= Mathf.Lerp(transform.InverseTransformDirection(_rigidbody.velocity).z / speed, speedMultiplier, _boostTime / duration);
+            fast *= Mathf.Lerp(transform.InverseTransformDirection(_rigidbody.velocity).z / speed, speedMultiplier, _boostTime / (duration+0.6f));
         } else if (_boosted) {
             _boostTime += Time.deltaTime;
             fast *= Mathf.Lerp(speedMultiplier, Input.GetAxis("Vertical"), _boostTime / (duration/2));
