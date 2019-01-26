@@ -49,7 +49,3 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
-#Blender save files
-*.blend
-*.blend.meta
