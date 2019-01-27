@@ -18,14 +18,14 @@ public class PropsGenerator : MonoBehaviour
         propObject.transform.localScale = Vector3.one;
         for (int i =0; i<6; i++)
         {
-            if (Random.Range(0, 100) < 30)
+            if (Random.Range(0, 100) < 70)
                 continue;
             GameObject newMemory = Instantiate(memory, transform);
             newMemory.transform.localPosition = new Vector3(Random.Range(-4f,4f),0.4f,Random.Range(-4f,4f));
         }
         for (int i =0; i<3; i++)
         {
-            if (Random.Range(0, 100) < 30)
+            if (Random.Range(0, 100) < 70)
                 continue;
             GameObject newMemory = Instantiate(infermiere, transform);
             newMemory.transform.localPosition = new Vector3(Random.Range(-9f,9f),1f,Random.Range(-9f,9f));
