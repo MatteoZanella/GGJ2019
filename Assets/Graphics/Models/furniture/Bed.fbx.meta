@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 09b550f3a8d676a48af39108278a87db
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Base
+    100002: //RootNode
+    100004: Camera
+    100006: Coperta
+    100008: Cuscino
+    100010: Lamp
+    100012: Materasso
+    100014: ParteFuori
+    400000: Base
+    400002: //RootNode
+    400004: Camera
+    400006: Coperta
+    400008: Cuscino
+    400010: Lamp
+    400012: Materasso
+    400014: ParteFuori
+    2000000: Camera
+    2100000: Materasso
+    2100002: sheets
+    2100004: Cuscino
+    2100006: esterioricoperte
+    2100008: LettoBase
+    2300000: Base
+    2300002: Coperta
+    2300004: Cuscino
+    2300006: Materasso
+    2300008: ParteFuori
+    3300000: Base
+    3300002: Coperta
+    3300004: Cuscino
+    3300006: Materasso
+    3300008: ParteFuori
+    4300000: Materasso
+    4300002: Coperta
+    4300004: Cuscino
+    4300006: ParteFuori
+    4300008: Base
+    6400000: Base
+    6400002: Coperta
+    6400004: Cuscino
+    6400006: Materasso
+    6400008: ParteFuori
+    10800000: Lamp
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cuscino
+    second: {fileID: 2100000, guid: d60ae5302265140dbb862176bc2d5617, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LettoBase
+    second: {fileID: 2100000, guid: 70b98df98009947128406499a735eca3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Materasso
+    second: {fileID: 2100000, guid: 75877c08c5e9c4011bf41d6ba9e67c93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: esterioricoperte
+    second: {fileID: 2100000, guid: f748a63da735440f2894f3f661b2fd53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sheets
+    second: {fileID: 2100000, guid: 3853e9ddcf9a44d41bceab5184458f88, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
