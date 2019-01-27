@@ -12,7 +12,7 @@ public class RageBar : MonoBehaviour
     private float currentRage;
     private bool freezed;
     [SerializeField] private Image Bar;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,11 @@ public class RageBar : MonoBehaviour
         if (freezed)
             return;
         currentRage += Time.deltaTime;
+        if (currentRage > maxRage)
+        {
+            Application.LoadLevel(2);
+            return;
+        }
         Bar.fillAmount = currentRage / maxRage;
     }
 

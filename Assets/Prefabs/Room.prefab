@@ -329,6 +329,7 @@ MonoBehaviour:
   - {fileID: 4343743021637150493, guid: ad71789af2d226c4f9af46e12cb1adf9, type: 3}
   - {fileID: 5534616876584243965, guid: f98f95b3b04353246a22850964afc4aa, type: 3}
   memory: {fileID: 1094398336497672481, guid: e596cab00bdd1ad4b8b8cd8f10ff3dfe, type: 3}
+  infermiere: {fileID: 511686566, guid: 8148569745a8342288b9b5b56fb32044, type: 3}
 --- !u!64 &6296134534037877803
 MeshCollider:
   m_ObjectHideFlags: 0
