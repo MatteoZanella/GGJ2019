@@ -8,11 +8,11 @@ public class WheelChair : MonoBehaviour
     public float speed;
     public float steer;
     [SerializeField] private Rigidbody _rigidbody;
-
+    public Vector3 fallOffset = new Vector3(0,0,70f);
     [Header("Boost")] public float duration = 2.5f;
-    public float speedMultiplyer = 4;
+    public float speedMultiplier = 2.5f;
     [SerializeField] private ParticleSystem boostParticles;
-    private bool _boostOn = false;
+    private bool _boostOn = false, _boosted = false;
 
     [Header("Eject")] public FixedJoint[] joints;
     public Vector3 ejectPower;
@@ -21,19 +21,44 @@ public class WheelChair : MonoBehaviour
     private bool _ejected;
 
     [Header("character")] public GameObject prefab;
-    private float _ejectTime = 0;
+    private float _ejectTime = 0, _boostTime;
+    public Transform com;
 
     private void Start()
     {
-        Camera.main.GetComponent<SmoothFollow>().target = transform;
+        StartCoroutine(Dab());
     }
 
+    IEnumerator Dab()
+    {
+        character.GetComponent<Salmon>().CameraTarget.eulerAngles = transform.TransformDirection(Vector3.back);
+        Camera.main.GetComponent<SmoothFollow>().target = character.GetComponent<Salmon>().CameraTarget;
+        yield return new WaitForSeconds(0.5f);
+        Camera.main.GetComponent<SmoothFollow>().target = transform;
+    }
+    
+    
     void Update()
     {
+        _rigidbody.centerOfMass = com.localPosition;
         _ejectTime += Time.deltaTime;
         if (_ejected && !_boostOn)
             return;
-        float fast = speed * (_boostOn ? speedMultiplyer : Input.GetAxis("Vertical"));
+        float fast = speed;
+        if (_boostOn)
+        {
+            _boostTime += Time.deltaTime;
+            fast *= Mathf.Lerp(transform.InverseTransformDirection(_rigidbody.velocity).z / speed, speedMultiplier, _boostTime / (duration+0.6f));
+        } else if (_boosted) {
+            _boostTime += Time.deltaTime;
+            fast *= Mathf.Lerp(speedMultiplier, Input.GetAxis("Vertical"), _boostTime / (duration/2));
+        } else
+        {
+            fast *= Input.GetAxis("Vertical");
+        }
+
+        Debug.Log(fast / speed);
+
         float str = Input.GetAxis("Horizontal") * steer;
         transform.Rotate(Vector3.up, str);
         var localVel = transform.InverseTransformDirection(_rigidbody.velocity);
@@ -41,10 +66,10 @@ public class WheelChair : MonoBehaviour
         _rigidbody.velocity = transform.TransformDirection(localVel);
         if (_ejected)
             return;
-        if (transform.localEulerAngles.x > 60 && transform.localEulerAngles.x < 270 ||
-            transform.localEulerAngles.x > 300 && transform.localEulerAngles.x < 310||
-            transform.localEulerAngles.z > 45 && transform.localEulerAngles.z < 90  ||
-            transform.localEulerAngles.z > 270 && transform.localEulerAngles.z < 315)
+        if (transform.localEulerAngles.x > fallOffset.x && transform.localEulerAngles.x < 270 ||
+            transform.localEulerAngles.x > 270 && transform.localEulerAngles.x < 360-fallOffset.x||
+            transform.localEulerAngles.z > fallOffset.z && transform.localEulerAngles.z < 90  ||
+            transform.localEulerAngles.z > 270 && transform.localEulerAngles.z < 360-fallOffset.z)
             Eject(false);
         if (Input.GetKeyDown(KeyCode.E))
             Eject();
@@ -62,9 +87,15 @@ public class WheelChair : MonoBehaviour
     {
         _boostOn = true;
         boostParticles.Play();
-        yield return new WaitForSeconds(duration);
+        _boostTime = 0;
+        yield return new WaitForSeconds(duration);        
         boostParticles.Stop();
         _boostOn = false;
+
+        _boostTime = 0;
+        _boosted = true;
+        yield return new WaitForSeconds(duration/2);
+        _boosted = false;
     }
 
 
@@ -81,6 +112,7 @@ public class WheelChair : MonoBehaviour
 
         RecSetLayer(character);
         character.SetParent(null);
+       
         Camera.main.GetComponent<SmoothFollow>().target = character.GetComponent<Salmon>().CameraTarget;
         Destroy(GetComponent<FixedJoint>());
         _ejectTime = 0;

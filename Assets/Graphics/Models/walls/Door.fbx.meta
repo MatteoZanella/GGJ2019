@@ -3,12 +3,26 @@ guid: 57a63e9a195d3fe438cdb33fd1e4cf6e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Material
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Door
+    100000: Camera
+    100002: //RootNode
+    100004: Door
+    100006: Doorknob
+    100008: Lamp
+    400000: Camera
+    400002: //RootNode
+    400004: Door
+    400006: Doorknob
+    400008: Lamp
+    2000000: Camera
+    2100000: Porta
+    2300000: Door
+    2300002: Doorknob
+    3300000: Door
+    3300002: Doorknob
+    4300000: Doorknob
+    4300002: Door
+    9500000: //RootNode
+    10800000: Lamp
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -61,8 +75,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -89,7 +103,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
