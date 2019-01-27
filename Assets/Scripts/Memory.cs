@@ -5,6 +5,8 @@ using UnityEngine;
 public class Memory : MonoBehaviour
 {
     public Animator animator;
+
+    private static readonly int Destroy1 = Animator.StringToHash("Destroy");
     // Start is called before the first frame update
         
     private void OnTriggerEnter(Collider other)
@@ -12,7 +14,9 @@ public class Memory : MonoBehaviour
         if (other.CompareTag("Player") || other.CompareTag("GameController"))
         {
             RageBar.instance.ChangeRage(-10);
-            Destroy(gameObject);
+            animator.SetTrigger(Destroy1);
+            enabled = false;
+            Destroy(gameObject, 1f);
         }
     }
 }
