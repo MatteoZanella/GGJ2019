@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: db7dd68d80b06ba4099b6acd15f5519e
+guid: 9dc6c5316952323468576c2189e06062
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Camera
-    100004: Circle
+    100000: Camera
+    100002: Copertina
+    100004: Fogli
     100006: Lamp
-    400000: //RootNode
-    400002: Camera
-    400004: Circle
+    100008: //RootNode
+    400000: Camera
+    400002: Copertina
+    400004: Fogli
     400006: Lamp
+    400008: //RootNode
     2000000: Camera
-    2100000: Cestino
-    2300000: Circle
-    3300000: Circle
-    4300000: Circle
+    2100000: ColoreLibro
+    2300000: Copertina
+    2300002: Fogli
+    3300000: Copertina
+    3300002: Fogli
+    4300000: Fogli
+    4300002: Copertina
     10800000: Lamp
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cestino
-    second: {fileID: 2100000, guid: db7dd68d80b06ba4099b6acd15f5519e, type: 3}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
