@@ -6,17 +6,13 @@ public class Memory : MonoBehaviour
 {
     public Animator animator;
     // Start is called before the first frame update
-    void Start()
-    {
         
-    }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Destroy"))
+        if (other.CompareTag("Player") || other.CompareTag("GameController"))
         {
-            Destroy(this.gameObject);
+            RageBar.instance.ChangeRage(-10);
+            Destroy(gameObject);
         }
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class RageBar : MonoBehaviour
 {
+    public static RageBar instance;
     public float maxRage = 100f;
     [Min(0f)] public float startRage = 30f;
     private float currentRage;
@@ -15,6 +16,7 @@ public class RageBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         currentRage = startRage;
     }
 
@@ -37,6 +39,8 @@ public class RageBar : MonoBehaviour
     public void ChangeRage(float offset)
     {
         currentRage += offset;
+        if (currentRage < 0)
+            currentRage = 0;
     }
 
     public float getCurrentRage()
