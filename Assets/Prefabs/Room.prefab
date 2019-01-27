@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1399058904347764387}
   - component: {fileID: 3666120948201744637}
   - component: {fileID: 3281891507786494635}
-  - component: {fileID: 5216547176800574969}
+  - component: {fileID: 6296134534037877803}
   m_Layer: 0
   m_Name: Room
   m_TagString: Room
@@ -324,7 +324,8 @@ MonoBehaviour:
   - {fileID: 151614987, guid: e9702c6f68d85e7449c475d2086e9f0b, type: 3}
   - {fileID: 1223997322031456812, guid: e152337338421e34b86aacce04177cfa, type: 3}
   - {fileID: 151614987, guid: be3406a99eec01346a0b126bdac33d74, type: 3}
---- !u!64 &5216547176800574969
+  memory: {fileID: 1094398336497672481, guid: e596cab00bdd1ad4b8b8cd8f10ff3dfe, type: 3}
+--- !u!64 &6296134534037877803
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
