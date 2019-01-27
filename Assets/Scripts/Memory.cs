@@ -13,7 +13,7 @@ public class Memory : MonoBehaviour
     {
         if (other.CompareTag("Player") || other.CompareTag("GameController"))
         {
-            RageBar.instance.ChangeRage(-10);
+            RageBar.instance.ChangeRage(-5);
             animator.SetTrigger(Destroy1);
             enabled = false;
             Destroy(gameObject, 1f);
