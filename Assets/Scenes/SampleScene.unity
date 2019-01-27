@@ -687,9 +687,9 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
-  - component: {fileID: 534669907}
   - component: {fileID: 534669906}
   - component: {fileID: 534669908}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -785,11 +785,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Script: {fileID: 11500000, guid: baf5c04393174764d98f98b893f7dbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxRage: 100
+  startRage: 30
+  Bar: {fileID: 1427433711}
 --- !u!82 &534669908
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1264,7 +1267,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2213184186920516724, guid: 1187387e666f0419599a3728d2e48116, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1187387e666f0419599a3728d2e48116, type: 3}
 --- !u!1 &736336383
 GameObject:
@@ -1278,7 +1282,7 @@ GameObject:
   - component: {fileID: 736336386}
   - component: {fileID: 736336385}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1316,7 +1320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.23529412, b: 0.12941177, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1675,7 +1679,7 @@ GameObject:
   - component: {fileID: 1427433712}
   - component: {fileID: 1427433711}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1713,7 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9843137, g: 0.007843138, b: 0.02745098, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2479,7 +2483,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2213184186920516724, guid: 1187387e666f0419599a3728d2e48116, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1187387e666f0419599a3728d2e48116, type: 3}
 --- !u!1 &1850531049
 GameObject:
@@ -2938,7 +2943,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2213184186920516724, guid: 1187387e666f0419599a3728d2e48116, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1187387e666f0419599a3728d2e48116, type: 3}
 --- !u!4 &1984549737 stripped
 Transform:
@@ -3133,5 +3139,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2213184186920516724, guid: 1187387e666f0419599a3728d2e48116, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1187387e666f0419599a3728d2e48116, type: 3}

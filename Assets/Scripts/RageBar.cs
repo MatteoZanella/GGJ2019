@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RageBar : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class RageBar : MonoBehaviour
     [Min(0f)] public float startRage = 30f;
     private float currentRage;
     private bool freezed;
+    [SerializeField] private Image Bar;
     
     // Start is called before the first frame update
     void Start()
@@ -20,14 +22,9 @@ public class RageBar : MonoBehaviour
     void Update()
     {
         if (freezed)
-        {
             return;
-        }
-        else
-        {
-            currentRage += Time.deltaTime;
-        }
-        Debug.Log(currentRage);
+        currentRage += Time.deltaTime;
+        Bar.fillAmount = currentRage / maxRage;
     }
 
     public IEnumerator Freeze(float freezeTime)
