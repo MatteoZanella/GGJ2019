@@ -41,4 +41,9 @@ public class RageBar : MonoBehaviour
     {
         currentRage += offset;
     }
+
+    public float getCurrentRage()
+    {
+        return currentRage;
+    }
 }
