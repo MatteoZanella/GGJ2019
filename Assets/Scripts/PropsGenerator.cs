@@ -14,7 +14,7 @@ public class PropsGenerator : MonoBehaviour
     void Start()
     {
         GameObject propObject = Instantiate(propsTemplates[Random.Range(0, propsTemplates.Length)], transform);
-        while (Random.Range(0, 100) < 35)
+        while (Random.Range(0, 100) < 43)
         {
             GameObject newMemory = Instantiate(memory, transform);
             newMemory.transform.localPosition = new Vector3(Random.Range(-4f,4f),0.4f,Random.Range(-4f,4f));
