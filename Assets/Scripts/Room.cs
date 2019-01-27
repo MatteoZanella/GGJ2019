@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -11,7 +12,7 @@ public class Room : MonoBehaviour
     [SerializeField] private NavMeshSurface _surface;
     public List<Room> neighboors = new List<Room>();
 
-    public UnityAction Enter;
+    public Action Enter;
 
     private void GetWallOpen(Transform t, byte on)
     {
@@ -25,7 +26,7 @@ public class Room : MonoBehaviour
         GetWallOpen(S, openings[1]);
         GetWallOpen(W, openings[2]);
         GetWallOpen(E, openings[3]);
-        _surface.BuildNavMesh();
+//        _surface.BuildNavMesh();
     }
 
     private void OnTriggerEnter(Collider other)

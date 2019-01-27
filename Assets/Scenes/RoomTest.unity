@@ -255,7 +255,6 @@ GameObject:
   - component: {fileID: 1771071675}
   - component: {fileID: 1771071674}
   - component: {fileID: 1771071673}
-  - component: {fileID: 1771071672}
   - component: {fileID: 1771071671}
   - component: {fileID: 1771071670}
   m_Layer: 0
@@ -378,28 +377,6 @@ MonoBehaviour:
   height: 2
   heightDamping: 1
   rotationDamping: 10
---- !u!114 &1771071672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771071669}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!81 &1771071673
 AudioListener:
   m_ObjectHideFlags: 0
@@ -497,6 +474,7 @@ MonoBehaviour:
   RoomPrefab: {fileID: 6403339466311110128, guid: 1187387e666f0419599a3728d2e48116,
     type: 3}
   gridSize: {x: 20, y: 20}
+  player: {fileID: 0}
 --- !u!4 &2093364900
 Transform:
   m_ObjectHideFlags: 0
