@@ -375,8 +375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf5c04393174764d98f98b893f7dbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRage: 100
-  startRage: 30
+  maxRage: 60
+  startRage: 20
   Bar: {fileID: 1683898395}
 --- !u!82 &756038493
 AudioSource:
