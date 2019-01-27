@@ -14,6 +14,7 @@ public class PropsGenerator : MonoBehaviour
     void Start()
     {
         GameObject propObject = Instantiate(propsTemplates[Random.Range(0, propsTemplates.Length)], transform);
+        propObject.transform.localScale = Vector3.one;
         while (Random.Range(0, 100) < 43)
         {
             GameObject newMemory = Instantiate(memory, transform);
