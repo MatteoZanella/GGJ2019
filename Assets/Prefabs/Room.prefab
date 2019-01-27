@@ -325,6 +325,7 @@ MonoBehaviour:
   - {fileID: 1223997322031456812, guid: e152337338421e34b86aacce04177cfa, type: 3}
   - {fileID: 151614987, guid: be3406a99eec01346a0b126bdac33d74, type: 3}
   memory: {fileID: 1094398336497672481, guid: e596cab00bdd1ad4b8b8cd8f10ff3dfe, type: 3}
+  infermiere: {fileID: 511686566, guid: 8148569745a8342288b9b5b56fb32044, type: 3}
 --- !u!64 &6296134534037877803
 MeshCollider:
   m_ObjectHideFlags: 0
