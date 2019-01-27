@@ -27,6 +27,7 @@ public class WheelChair : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Dab());
+        WorldGenerator.instance.player = transform;
     }
 
     IEnumerator Dab()
@@ -56,9 +57,6 @@ public class WheelChair : MonoBehaviour
         {
             fast *= Input.GetAxis("Vertical");
         }
-
-        Debug.Log(fast / speed);
-
         float str = Input.GetAxis("Horizontal") * steer;
         transform.Rotate(Vector3.up, str);
         var localVel = transform.InverseTransformDirection(_rigidbody.velocity);
@@ -112,7 +110,7 @@ public class WheelChair : MonoBehaviour
 
         RecSetLayer(character);
         character.SetParent(null);
-       
+        WorldGenerator.instance.player = character.GetComponent<Salmon>().CameraTarget;
         Camera.main.GetComponent<SmoothFollow>().target = character.GetComponent<Salmon>().CameraTarget;
         Destroy(GetComponent<FixedJoint>());
         _ejectTime = 0;
@@ -134,7 +132,7 @@ public class WheelChair : MonoBehaviour
         Destroy(gameObject);
 
         GameObject go = Instantiate(prefab, transform.position,
-            Quaternion.EulerRotation(0,transform.eulerAngles.y, 0));
+            Quaternion.EulerRotation(0, transform.eulerAngles.y, 0));
         go.GetComponent<WheelChair>().prefab = prefab;
     }
 }
