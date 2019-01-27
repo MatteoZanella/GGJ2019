@@ -33,7 +33,7 @@ public class Infermiere : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.impulse.magnitude > 10)
+        if (other.impulse.magnitude > 10 && GameObject.FindWithTag("GameController").GetComponent<WheelChair>()._boostOn)
         {
             _animator.SetTrigger(Hit);
             _agent.isStopped = true;

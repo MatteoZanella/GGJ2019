@@ -12,7 +12,7 @@ public class WheelChair : MonoBehaviour
     [Header("Boost")] public float duration = 2.5f;
     public float speedMultiplier = 2.5f;
     [SerializeField] private ParticleSystem boostParticles;
-    private bool _boostOn = false, _boosted = false;
+    public bool _boostOn = false, _boosted = false;
 
     [Header("Eject")] public FixedJoint[] joints;
     public Vector3 ejectPower;
