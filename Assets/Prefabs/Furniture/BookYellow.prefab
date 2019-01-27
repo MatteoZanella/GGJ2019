@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 8356791023074379789}
   - component: {fileID: 6035149200927810610}
   - component: {fileID: 5098429828682510303}
-  - component: {fileID: 8083255733568531218}
+  - component: {fileID: 8286309772368784635}
   m_Layer: 0
   m_Name: Copertina
   m_TagString: Untagged
@@ -127,8 +127,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8083255733568531218
-MeshCollider:
+--- !u!65 &8286309772368784635
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,10 +137,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: 9dc6c5316952323468576c2189e06062, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.020086616, y: 0.020000009, z: 0.020262284}
+  m_Center: {x: -0.00004331022, y: 4.6566134e-10, z: 0.0001269407}
 --- !u!1 &8663258081484574994
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +151,6 @@ GameObject:
   - component: {fileID: 932629847477212465}
   - component: {fileID: 380109212480018923}
   - component: {fileID: 2243339478667708502}
-  - component: {fileID: 8663258081484574995}
   m_Layer: 0
   m_Name: Fogli
   m_TagString: Untagged
@@ -219,17 +217,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8663258081484574995
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8663258081484574994}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 9dc6c5316952323468576c2189e06062, type: 3}
