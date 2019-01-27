@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!208 &1357447723583746500
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5767861475117073126}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.215, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.34, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6698915741603715009
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,11 +55,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5461865827061070506}
     m_Modifications:
-    - target: {fileID: 1656953100309722302, guid: 2c5745776b639e74db2d10ebd559762c,
-        type: 3}
-      propertyPath: m_Name
-      value: Lamp
-      objectReference: {fileID: 0}
     - target: {fileID: 345340190117746835, guid: 2c5745776b639e74db2d10ebd559762c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -98,6 +109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656953100309722302, guid: 2c5745776b639e74db2d10ebd559762c,
+        type: 3}
+      propertyPath: m_Name
+      value: Lamp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c5745776b639e74db2d10ebd559762c, type: 3}
@@ -176,6 +192,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0cdb4aeae7e9c84a8589fbf3d2276ee, type: 3}
+--- !u!1 &5767861475117073126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9052453982541240544, guid: f0cdb4aeae7e9c84a8589fbf3d2276ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290804889855416838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6685322254499072071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8172978579175182913, guid: f0cdb4aeae7e9c84a8589fbf3d2276ee,

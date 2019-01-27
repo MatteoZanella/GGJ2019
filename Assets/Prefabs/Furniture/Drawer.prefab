@@ -102,6 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3725872259446890796}
   - component: {fileID: 798310644}
+  - component: {fileID: 185135504714119707}
   m_Layer: 0
   m_Name: Drawer
   m_TagString: Untagged
@@ -140,3 +141,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &185135504714119707
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6408715201558903285}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.8, y: 2.205, z: 2.155}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.16, z: 0}
+  m_TimeToStationary: 0.5

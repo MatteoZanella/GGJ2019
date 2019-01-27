@@ -26,7 +26,7 @@ public class Room : MonoBehaviour
         GetWallOpen(S, openings[1]);
         GetWallOpen(W, openings[2]);
         GetWallOpen(E, openings[3]);
-//        _surface.BuildNavMesh();
+        _surface.BuildNavMesh();
     }
 
     private void OnTriggerEnter(Collider other)
