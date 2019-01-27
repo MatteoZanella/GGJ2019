@@ -56,9 +56,6 @@ public class WheelChair : MonoBehaviour
         {
             fast *= Input.GetAxis("Vertical");
         }
-
-        Debug.Log(fast / speed);
-
         float str = Input.GetAxis("Horizontal") * steer;
         transform.Rotate(Vector3.up, str);
         var localVel = transform.InverseTransformDirection(_rigidbody.velocity);
