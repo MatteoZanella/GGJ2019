@@ -1,7 +1,5 @@
 # Escape from Alzheimer
 
-# Escape from Alzheimer
-
 ![cover](https://ggj.s3.amazonaws.com/styles/game_sidebar__wide/featured_image/2019/01/260146/cover.jpg?itok=Coouqq_L&timestamp=1548604343)
 
 This game is about an old man, a scientist, in a retirement home. He wants to escape and go back to his home, but he has alzheimer. Alzheimer doesn't let him remember where did he go(Randomness of levels and generation in real time). Nurses try to stop him until his angery gets high and he stops(Fail).
